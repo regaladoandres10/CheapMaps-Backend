@@ -37,8 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'CheapMapsApp',
     'rest_framework',
+    'myapp',
 ]
 
 MIDDLEWARE = [
@@ -76,8 +76,16 @@ WSGI_APPLICATION = 'CheapMaps.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        #Driver de postgresSQL
+        'ENGINE': 'django.db.backends.postgresql',
+        #Nombre de la base de datos
+        'NAME': 'db_cheap_maps',
+        #Usuario de postgres
+        'USER': 'postgres',
+        #Contraseña de postgres
+        'PASSWORD': 'root',
+        'HOST': 'localhost',
+        'PORT': '5432',
     }
 }
 
